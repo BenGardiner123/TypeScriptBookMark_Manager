@@ -1,0 +1,1 @@
+This is for my TS and JS file - we are going to be working with classes!
