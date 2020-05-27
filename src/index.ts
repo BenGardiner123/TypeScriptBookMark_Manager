@@ -1,10 +1,20 @@
-let myButton = document.getElementById("myButton") as HTMLButtonElement | null;
-if (myButton == null) {
-    alert("Button not found.");
-} else {
-    
-    myButton.onclick = function () {
-        if(myButton == undefined) return;
-        alert("Hello World!");
+class Bookmark {
+    title: string;
+    icon: string;
+    favorite: boolean;
+    constructor(title:string, icon:string, favorite: boolean) {
+        this.title = title;
+        this.icon = icon;
+        this.favorite = favorite;
+        
     }
+
+    setUrl(url:string){
+
+    }
+
+    getUrl():string {
+        return "";
+    }
+
 }
