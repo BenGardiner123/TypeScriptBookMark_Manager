@@ -10,29 +10,28 @@ export class Bookmark {
     }
 
 
-    
-
-
 }
 
- /*   export class CreateElementBookMark {
-        bookmark: Bookmark
+export class CreateElementBookMark {
+        bookmark: Bookmark;
         element: HTMLElement | null = null;
-        root: HTMLElement | null = null;
+        base: HTMLElement | null = null;
         
         constructor(abookmark:Bookmark) {
             this.bookmark = abookmark;
         }
 
-        create(root: HTMLElement) {
-            this.root = root;
-            this.element = document.createElement("div");
-            this.element = document.appendChild(document.createTextNode(this.bookmark.title));
+        create(id: string) {
+            document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.title))
 
+
+            /* this.element = document.createElement("div");
+            this.element = document.appendChild(document.createTextNode(this.bookmark.title));
+ */
         }
 
 
-    } */
+    } 
 
 
 
