@@ -9,10 +9,11 @@ export class Bookmark {
     }
 
     createBookMark(id: string) {
-        let bkm1 = document.createElement("div") as HTMLDivElement | null;
-        
+        let bkm1 = document.createElement("div") as HTMLDivElement| null;
+        bkm1?.appendChild
         document.getElementById(id)?.appendChild(document.createTextNode(this.title))
         document.getElementById(id)?.appendChild(document.createTextNode(this.icon))
+        
     }
 
 

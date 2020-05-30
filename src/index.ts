@@ -14,7 +14,7 @@ if (myButton == null || bookMarkBox == null) {
            alert("Some problems with your elements and probobly have to text in your input box");
            return;
         } 
-        let b1 = new Bookmark(userInput.value, "null" )
+        let b1 = new Bookmark(userInput.value, "null")
         b1.createBookMark("bMark")
     }
 } 
