@@ -2,11 +2,17 @@ export class Bookmark {
     title: string;
     icon: string;
     favorite: boolean = false;
-    constructor(title: string, icon: string, favorite: boolean) {
+    constructor(title: string, icon: string) {
         this.title = title;
         this.icon = icon;
-        this.favorite = favorite;
         
+    }
+
+    createBookMark(id: string) {
+        let bkm1 = document.createElement("div") as HTMLDivElement | null;
+        
+        document.getElementById(id)?.appendChild(document.createTextNode(this.title))
+        document.getElementById(id)?.appendChild(document.createTextNode(this.icon))
     }
 
 
@@ -14,21 +20,13 @@ export class Bookmark {
 
 export class CreateElementBookMark {
         bookmark: Bookmark;
-        element: HTMLElement | null = null;
-        base: HTMLElement | null = null;
         
-        constructor(abookmark:Bookmark) {
-            this.bookmark = abookmark;
+        
+        constructor(bookmark:Bookmark) {
+            this.bookmark = bookmark;
+
         }
 
-        create(id: string) {
-            document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.title))
-
-
-            /* this.element = document.createElement("div");
-            this.element = document.appendChild(document.createTextNode(this.bookmark.title));
- */
-        }
 
 
     } 

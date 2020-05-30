@@ -9,9 +9,12 @@ if (myButton == null || bookMarkBox == null) {
     alert ("button not found!"); 
 } else {
     myButton.onclick = function() {
-        if(myButton == null || bookMarkBox == null) return;
-        
-        
-        
+        if(myButton == null || bookMarkBox == null || userInput == null)
+        {
+           alert("Some problems with your elements and probobly have to text in your input box");
+           return;
+        } 
+        let b1 = new Bookmark(userInput.value, "null" )
+        b1.createBookMark("bMark")
     }
 } 
