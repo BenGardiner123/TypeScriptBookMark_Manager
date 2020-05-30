@@ -1,19 +1,22 @@
 export class Bookmark {
     title: string;
-    icon: string;
+    // icon: string;
     favorite: boolean = false;
-    constructor(title: string, icon: string) {
+    url: string = "";
+    constructor(title: string) {
         this.title = title;
-        this.icon = icon;
         
     }
 
-    createBookMark(id: string) {
-        let bkm1 = document.createElement("div") as HTMLDivElement| null;
-        bkm1?.appendChild
-        document.getElementById(id)?.appendChild(document.createTextNode(this.title))
-        document.getElementById(id)?.appendChild(document.createTextNode(this.icon))
+    setUrl(newUrl:string){
+         this.url = newUrl;
+        ///use this to set tthe url initially
+    }
+
+    getUrl():string {
         
+        return this.url;
+        // gets the url stored in the object box form the element on the page
     }
 
 
@@ -28,20 +31,18 @@ export class CreateElementBookMark {
 
         }
 
-
+        createBookMark(id: string) {
+            let bkm1 = document.createElement("div") as HTMLDivElement| null;
+            
+            document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.title))
+            document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.getUrl()))
+            
+        }
 
     } 
 
 
 
 
-   /*  setUrl(url:string){
-        // when you click the add button it should open up a new tile with an add button - when you add the url into the feild it souhld be into the argu
-    }
+    
 
-    getUrl():string {
-        return "";
-        // this shoould be get the link in the a tag on goto
-    }
-
- */
