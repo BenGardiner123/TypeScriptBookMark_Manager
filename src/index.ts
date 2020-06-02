@@ -14,7 +14,7 @@ if (myButton == null || bookMarkBox == null) {
            alert("Some problems with your elements and probobly have to text in your input box");
            return;
         } else { 
-        let bk1 = new Bookmark(userInput.value)
+        let bk1 = new Bookmark(userInput.value, false)
         bk1.setUrl(userTitle.value)
         let el = new CreateElementBookMark(bk1)
 

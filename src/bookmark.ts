@@ -3,8 +3,9 @@ export class Bookmark {
     // icon: string;
     favorite: boolean = false;
     url: string = "";
-    constructor(title: string) {
+    constructor(title: string, favorite: boolean) {
         this.title = title;
+        this.favorite = favorite;
         
     }
 
