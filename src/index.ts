@@ -17,8 +17,9 @@ if (myButton == null || bookMarkBox == null) {
         let bk1 = new Bookmark(userInput.value, false)
         bk1.setUrl(userTitle.value)
         let el = new CreateElementBookMark(bk1)
-            
+
         el.createBookMark("bMark")
+        
         }
         
     }

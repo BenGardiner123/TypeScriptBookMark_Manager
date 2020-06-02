@@ -33,16 +33,13 @@ export class CreateElementBookMark {
     }
 
     createBookMark(id: string) {
+        //i need to dyamcially rename each div when i create it or at least try and get a better way of making this styleable - i can;t seem to target the #text property of the new content when it'screated 
         
-        var bkm1 = document.createElement("div");
-        bkm1.id = "urlBox";
-        var bkm2 = document.createElement("div");
-        bkm2.id = 'TitleBox';
-        document.getElementById(id)?.appendChild(bkm1);
-        document.getElementById(id)?.appendChild(bkm2);
-        document.getElementById('urlBox')?.appendChild(document.createTextNode(this.bookmark.title))
-        document.getElementById('urlBox')?.appendChild(document.createElement("br"))
-        document.getElementById('TitleBox')?.appendChild(document.createTextNode(this.bookmark.getUrl()))
+        let bkm1 = document.createElement("div") as HTMLDivElement | null;
+    
+        document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.title))
+        document.getElementById(id)?.appendChild(document.createElement("br"))
+        document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.getUrl()))
 
     }
 
