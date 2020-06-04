@@ -16,18 +16,26 @@ if (myButton == null || bookMarkBox == null) {
             alert("Some problems with your elements and probobly have to text in your input box");
             return;
         } else {
+            //new instance of a bookmark
             let bk1 = new Bookmark(userInput.value, false)
+            //using the setter append the user input to the bookmark
             bk1.setUrl(userTitle.value)
+            //add the bookmark to the array
             bookMarkStorage.push(bk1);
 
+            //instantiate a new instance of a boomark element
             let el = new CreateElementBookMark(bk1)
             
+            
             let fragment = document.getElementById("bookmark-template") as HTMLTemplateElement;
+            // bookmarkel gets the bookmark and then passes a method to it which takes fragment (the template)
             const bookmarkEl = el.createBookMark(fragment);
+            //null checking
             if(bookmarkEl == null) {
                 alert("Seomthing broke")
                 return;
             }
+            
             bookMarkBox.appendChild(bookmarkEl); // add new div
             console.log(bookMarkStorage, bookmarkEl)
 

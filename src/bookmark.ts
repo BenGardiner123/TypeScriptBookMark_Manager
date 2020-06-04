@@ -32,22 +32,21 @@ export class CreateElementBookMark {
 
     }
 
-    createBookMark(fragment: HTMLTemplateElement){ //fragment) {
-        //i need to dyamcially rename each div when i create it or at least try and get a better way of making this styleable - i can;t seem to target the #text property of the new content when it'screated 
-        
+    createBookMark(fragment: HTMLTemplateElement){ 
 
-        // document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.title))
-        // document.getElementById(id)?.appendChild(document.createElement("br"))
-        // document.getElementById(id)?.appendChild(document.createTextNode(this.bookmark.getUrl()))
         let instance = document.importNode(fragment.content, true);
-        // Add relevant content to the template
-        let title = instance.querySelector('#title');
+     
+        let title = instance.querySelector('.title');
         if(title == null){ 
             return null;
         }
         title.innerHTML = this.bookmark.title;
-        //instance.querySelector('#url').innerHTML = book.author;
-        // Append the instance ot the DOM
+
+        let url = instance.querySelector('.url');
+        if(url == null){ 
+            return null;
+        }
+        url.innerHTML = this.bookmark.url;
         
         return instance;
     }
