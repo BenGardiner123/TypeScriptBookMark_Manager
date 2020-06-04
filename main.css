@@ -1,5 +1,6 @@
 .body{
     box-sizing: border-box;
+    background-color: ;
 }
 
 .container {
@@ -21,26 +22,55 @@
 }
 
 .examplebMark {
-
+    margin-top: 10px;
+    margin-left: 30px;
+    padding-top: 10px;
+    
     width: 500px;
-    height: 200px;
+    height: 100px;
     border: 1px black solid;
+    border-radius: 5px;
+    
+}
+.flex  {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.flex1{
+    flex-grow: 3;
+}
+
+button {
+
 }
 
 .icon {
     color: brown;
+    flex-grow: 0.5;
 }
 
 .title {
     font-family: 'Ubuntu', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid grey;
+
 }
 
 .url{
     font-family: 'Ubuntu', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid grey;
 }
 
 #favorite{
     font-family: 'Ubuntu', sans-serif;
+    flex-grow: 0.5;
+    height: 50px;
+    width: 50px;
 }
 
 
