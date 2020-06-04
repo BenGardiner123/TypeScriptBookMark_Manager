@@ -20,15 +20,27 @@
     border: 1px black solid;
 }
 
-#bMark {
+.examplebMark {
 
     width: 500px;
     height: 200px;
     border: 1px black solid;
 }
 
-#bMark text {
+.icon {
     color: brown;
+}
+
+.title {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.url{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#favorite{
+    font-family: 'Ubuntu', sans-serif;
 }
 
 

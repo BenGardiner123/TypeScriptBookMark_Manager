@@ -38,13 +38,12 @@ if (myButton == null || bookMarkBox == null) {
             
             let bmOutput = document.getElementsByClassName("bmOutput")[0];
             bmOutput.appendChild(bookmarkEl)
-            console.log(bookMarkStorage, bookmarkEl)
-
-           
-          
+            console.log(bookMarkStorage, bookmarkEl)    
             
 
         }
+
+
 
     }
 } 
