@@ -35,6 +35,9 @@ if (myButton == null || bookMarkBox == null) {
                 alert("Seomthing broke")
                 return;
             }
+
+            var copy = document.getElementById('bookmark-template') as HTMLTemplateElement;
+            document.body.appendChild(copy.content.cloneNode(true));
             
             bookMarkBox.appendChild(bookmarkEl); // add new div
             console.log(bookMarkStorage, bookmarkEl)

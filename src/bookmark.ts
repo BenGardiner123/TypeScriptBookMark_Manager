@@ -32,28 +32,27 @@ export class CreateElementBookMark {
 
     }
 
-    createBookMark(fragment: HTMLTemplateElement){ 
-
+    createBookMark(fragment: HTMLTemplateElement) {
         let instance = document.importNode(fragment.content, true);
-     
+
         let title = instance.querySelector('.title');
-        if(title == null){ 
+        if (title == null) {
             return null;
         }
         title.innerHTML = this.bookmark.title;
 
         let url = instance.querySelector('.url');
-        if(url == null){ 
+        if (url == null) {
             return null;
         }
         url.innerHTML = this.bookmark.url;
-        
+
         return instance;
     }
 
-   
-        
- }
+
+
+}
 
 
 
