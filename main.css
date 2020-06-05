@@ -1,24 +1,51 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
 .body{
     box-sizing: border-box;
-    background-color: ;
+    background-color: #DBD5C7;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
-    padding-top: 30px;
     margin: auto;
     height: 800px;
     width:  600px;
     border: 1px black solid;
+    background-color: #DBD5C7;
+    border-radius: 10px;
 }
 
-.bookMarkBox {
+#bookMarkBox {
     display: block;
-    
-    padding-top: 10px;
-    margin: auto;
-    height: 600px;
-    width: 451px;
+    padding-left: 148px;
+    height: 100px;
     border: 1px black solid;
+    background-color: #5681DC;
+    border-radius: 10px;
+
+}
+
+#input{
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#title{
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#titleHeading{
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: larger;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    color: #DBD5C7;
+}
+
+#mybutton {
+
 }
 
 .examplebMark {
@@ -30,7 +57,7 @@
     height: 100px;
     border: 1px black solid;
     border-radius: 5px;
-    
+    background-color:#B5B0A2;
 }
 .flex  {
     display: flex;
@@ -42,8 +69,8 @@
     flex-grow: 3;
 }
 
-button {
-
+.buttonHolder {
+    padding: 18px;
 }
 
 .icon {
@@ -56,6 +83,7 @@ button {
     padding-top: 5px;
     padding-bottom: 5px;
     border: 1px solid grey;
+    background-color: rgb(233, 230, 223);
 
 }
 
@@ -64,13 +92,30 @@ button {
     padding-top: 5px;
     padding-bottom: 5px;
     border: 1px solid grey;
+    background-color: rgb(233, 230, 223);
 }
 
-#favorite{
-    font-family: 'Ubuntu', sans-serif;
-    flex-grow: 0.5;
-    height: 50px;
-    width: 50px;
+.favorite{
+    padding: 5px;
 }
+
+.favorite::before {
+padding: 2px;
+content: '\2665';
+color: red;
+}
+
+#bookmark-template{
+    margin-top: 10px;
+    margin-left: 30px;
+    padding-top: 10px;
+    
+    width: 500px;
+    height: 100px;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color:#B5B0A2;
+}
+
 
 

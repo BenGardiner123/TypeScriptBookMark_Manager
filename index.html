@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css" type="text/css">
     <title>Bookmark</title>
 </head>
@@ -14,49 +15,66 @@
     <div class="container">
 
         <div id="bookMarkBox">
-
+            <div id="titleHeading">Your BookMark Manager</div>
             <input type="text" id="input" placeholder="put the URL here"><br>
             <input type="text" id="title" placeholder="put the title here">
 
-            <button id="myButton">Add you bookmark</button>
+            <button id="myButton">Add your bookmark</button>
 
         </div>
 
         <template id="bookmark-template">
-            <div class="flex">
-                <div class="icon"></div>
-                <div class="title"></div>
-                <div class="url"></div>
-                <button id="favorite">Fav?</button>
+            
+
+            <div class="flex examplebMark">
+
+                <div class="icon">
+                    Hello
+                </div>
+
+                <div class="flex1">
+                    <span>Title</span>
+                    <div class="title"></div>
+                    <span>URL</span>
+                    <div class="url"></div>
+                </div>
+
+                <div class="buttonHolder">
+                    <button class="favorite">Fav</button>
+                </div>
+
             </div>
-          </template>
-        
+
+        </template>
+
         <div class="examplebMark">
 
             <div class="flex">
 
-                <div class="icon">Hello    
+                <div class="icon">
+                    Hello
                 </div>
-                    
-                    <div class="flex1">
-                        <span>Title</span>
-                        <div class="title">title</div>
-                        <span>URL</span>
-                        <div class="url">google</div>
-                    </div>
 
-                <button id="favorite">Fav?</button>
+                <div class="flex1">
+                    <span>Title</span>
+                    <div class="title">Google</div>
+                    <span>URL</span>
+                    <div class="url">www.google.com</div>
+                </div>
 
+                <div class="buttonHolder">
+                    <button class="favorite">Fav</button>
+                </div>
             </div>
 
         </div>
-        
-          
+
+
         <div class="bmOutput">
 
         </div>
-        
-       
+
+
 
     </div>
 
