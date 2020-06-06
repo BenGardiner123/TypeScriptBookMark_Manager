@@ -1,16 +1,21 @@
 export class Bookmark {
     title: string;
-    // icon: string;
+    icon: string;
     favorite: boolean = false;
     url: string = "";
-    constructor(title: string, favorite: boolean) {
+    constructor(title: string, favorite: boolean, icon: string) {
         this.title = title;
         this.favorite = favorite;
-
+        this.icon = icon;
+        
     }
 
     setUrl(newUrl: string) {
+        let userIcon =  newUrl.replace('http://','').replace('https://','').replace('www\.','').split(/[/?#]/);
+        let domain = userIcon[0];
+        this.icon = `https://s2.googleusercontent.com/s2/favicons?domain=${domain}`;
         this.url = newUrl;
+        
         ///use this to set tthe url initially
     }
 
@@ -46,6 +51,12 @@ export class CreateElementBookMark {
             return null;
         }
         url.innerHTML = this.bookmark.url;
+
+        let icon = instance.querySelector('.icon');
+        if (icon == null) {
+            return null;
+        }
+        icon.innerHTML = this.bookmark.icon;
 
         return instance;
     }

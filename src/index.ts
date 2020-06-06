@@ -17,9 +17,9 @@ if (myButton == null || bookMarkBox == null) {
             return;
         } else {
             //new instance of a bookmark
-            let bk1 = new Bookmark(userInput.value, false)
+            let bk1 = new Bookmark(userTitle.value, false, '')
             //using the setter append the user input to the bookmark
-            bk1.setUrl(userTitle.value)
+            bk1.setUrl(userInput.value)
             //add the bookmark to the array
             bookMarkStorage.push(bk1);
 
