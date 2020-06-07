@@ -52,11 +52,11 @@ export class CreateElementBookMark {
         }
         url.innerHTML = this.bookmark.url;
 
-        let icon = instance.querySelector('.icon');
+        let icon = instance.querySelector('.img');
         if (icon == null) {
             return null;
         }
-        icon.innerHTML = this.bookmark.icon;
+        icon.setAttribute('src', this.bookmark.icon);
 
         return instance;
     }
